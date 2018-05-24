@@ -15,11 +15,13 @@
 // $primary-btn-hover-bg-color <> $button-primary-hover-bg-color
 // $primary-btn-active-bg-color <> $primary-btn-hover-bg-color
 // $primary-btn-disabled-opacity <> $button-disabled-opacity
-// Removed $primary-btn-disabled-bg-color (redundant)
 // $btn-color <> $button-default-text-color
 // $btn-bg-color <> $button-default-bg-color
 // $btn-hover-bg-color <> $button-default-hover-bg-color
 // $btn-active-bg-color <> $button-default-hover-bg-color
+
+// Tokens to add
+// $primary-btn-disabled-bg-color
 
 // Also see:
 // sass/controls/_icons.scss
@@ -183,6 +185,7 @@ button {
 
   &[disabled],
   &[disabled]:hover {
+    background-color: $primary-btn-disabled-bg-color;
     border-color: $button-primary-bg-color;
     box-shadow: none;
     cursor: default;
