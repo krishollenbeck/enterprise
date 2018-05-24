@@ -1,6 +1,14 @@
 // Buttons
 //================================================== //
 
+// IDS Identity Notes:
+// @include font-size() mixin doens't jive with new var because we include the unit.
+// token font size is 1.6rem enterprise is 1.4rem (14px).
+// token height is 38px enterprise is 34px.
+// token line-height is normal enterprise is 1.
+// enterprise has ripple effect. not included in token
+// token has box-shadow focus/active state. enterprise only has on button links.
+
 // Also see:
 // sass/controls/_icons.scss
 
@@ -19,13 +27,13 @@ button {
   @include css3-extended(backface-visibility, hidden, (-webkit-, -moz-));
   @include css3-extended(transform, translate3d(0, 0, 0), (-webkit-, -moz-));
   @include css3-extended(color, transparent, (-webkit-tap-highlight-));
-  @include font-size($button-font-size);
   @include transition(color 300ms cubic-bezier(.17, .04, .03, .94), background-color 300ms cubic-bezier(.17, .04, .03, .94), border 300ms cubic-bezier(.17, .04, .03, .94), box-shadow 300ms cubic-bezier(.17, .04, .03, .94));
   @include antialiased();
   color: inherit;
+  font-size: $button-font-size;
   font-weight: 700;
-  height: 34px;
-  line-height: normal;
+  height: $button-height;
+  line-height: $button-line-height;
   min-width: 100px;
   overflow: hidden;
   position: relative;
@@ -42,7 +50,7 @@ button {
 
   > .icon {
     fill: inherit;
-    margin-top: -3px;
+    margin-top: -2px;
     position: static;
     width: 18px;
 
@@ -207,7 +215,7 @@ a.btn-secondary,
 a.btn-tertiary,
 a.btn-menu {
   display: inline-block;
-  line-height: 31px;
+  line-height: 35px;
   margin-bottom: -2px;
   min-width: auto;
   text-decoration: none;
