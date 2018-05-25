@@ -1,34 +1,6 @@
 // Buttons
 //================================================== //
 
-// IDS Identity Notes:
-// @include font-size() mixin doens't jive with new var because we include the unit.
-// token font size is 1.6rem enterprise is 1.4rem (14px).
-// token height is 38px enterprise is 34px.
-// token line-height is normal enterprise is 1.
-// enterprise has ripple effect. not included in token
-// token has box-shadow focus/active state. enterprise only has on button links.
-
-// Vars Changed
-// $primary-btn-bg-color <> $button-primary-bg-color
-// $primary-btn-color <> $button-primary-text-color
-// $primary-btn-hover-bg-color <> $button-primary-hover-bg-color
-// $primary-btn-active-bg-color <> $primary-btn-hover-bg-color
-// $primary-btn-disabled-opacity <> $button-disabled-opacity
-// $btn-color <> $button-default-text-color
-// $btn-bg-color <> $button-default-bg-color
-// $btn-hover-bg-color <> $button-default-hover-bg-color
-// $btn-active-bg-color <> $button-default-hover-bg-color
-
-// Tokens to add
-// $primary-btn-disabled-bg-color
-// $primary-btn-active-bg-color
-// $primary-btn-disabled-border-color
-// $primary-btn-disabled-bg-color
-// $primary-btn-active-bg-color
-// $primary-btn-disabled-border-color
-// $tertiary-btn-disabled-color
-
 // Also see:
 // sass/controls/_icons.scss
 
@@ -389,12 +361,12 @@ a.btn-menu {
 
   &[disabled],
   &[disabled]:hover {
-    color: $tertiary-btn-disabled-color;
+    color: $button-link-text-color;
     cursor: default;
     opacity: $button-disabled-opacity;
 
     .icon {
-      fill: $tertiary-btn-disabled-color;
+      fill: $button-link-text-color;
     }
   }
 
