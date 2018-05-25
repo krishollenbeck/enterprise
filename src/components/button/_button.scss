@@ -22,6 +22,12 @@
 
 // Tokens to add
 // $primary-btn-disabled-bg-color
+// $primary-btn-active-bg-color
+// $primary-btn-disabled-border-color
+// $primary-btn-disabled-bg-color
+// $primary-btn-active-bg-color
+// $primary-btn-disabled-border-color
+// $tertiary-btn-disabled-color
 
 // Also see:
 // sass/controls/_icons.scss
@@ -317,7 +323,6 @@ a.btn-menu {
     background-color: $btn-disabled-bg-color;
     border: 1px solid $btn-disabled-border-color;
     box-shadow: none;
-    color: $btn-disabled-color;
     cursor: default;
     opacity: $button-disabled-opacity;
   }
@@ -355,19 +360,23 @@ a.btn-menu {
   border: 1px solid transparent;
   border-radius: 2px;
   box-shadow: none;
-  color: $tertiary-btn-color;
+  color: $button-link-text-color;
   overflow: hidden;
 
   &:hover {
-    color: $tertiary-btn-hover-color;
+    color: $button-link-hover-text-color;
 
     .icon {
-      fill: $tertiary-btn-hover-color;
+      fill: $button-link-hover-text-color;
     }
   }
 
   &:active {
-    color: $tertiary-btn-active-color;
+    color: $button-link-active-text-color;
+
+    .icon {
+      fill: $button-link-active-text-color;
+    }
   }
 
   &:focus:not(.hide-focus) {
@@ -382,7 +391,7 @@ a.btn-menu {
   &[disabled]:hover {
     color: $tertiary-btn-disabled-color;
     cursor: default;
-    opacity: $tertiary-btn-disabled-opacity;
+    opacity: $button-disabled-opacity;
 
     .icon {
       fill: $tertiary-btn-disabled-color;
@@ -394,7 +403,7 @@ a.btn-menu {
   }
 
   .icon {
-    fill: $tertiary-btn-color;
+    fill: $button-link-text-color;
   }
 
   .ripple-effect {
