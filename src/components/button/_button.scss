@@ -23,7 +23,7 @@ button {
   @include antialiased();
   color: inherit;
   font-size: $button-font-size;
-  font-weight: 700;
+  font-weight: $button-font-weight;
   height: $button-height;
   line-height: $button-line-height;
   min-width: 100px;
@@ -143,8 +143,8 @@ button {
   }
 
   &:active {
-    background-color: $button-primary-hover-bg-color;
-    border: 1px solid $button-primary-hover-bg-color;
+    background-color: $button-primary-active-bg-color;
+    border: 1px solid $button-primary-active-bg-color;
     box-shadow: none;
   }
 
@@ -163,7 +163,7 @@ button {
 
   &[disabled],
   &[disabled]:hover {
-    background-color: $primary-btn-disabled-bg-color;
+    background-color: $button-primary-disabled-bg-color;
     border-color: $button-primary-bg-color;
     box-shadow: none;
     cursor: default;
@@ -273,8 +273,8 @@ a.btn-menu {
   }
 
   &:active {
-    background-color: $button-default-hover-bg-color;
-    border: 1px solid $button-default-hover-bg-color;
+    background-color: $button-default-active-bg-color;
+    border: 1px solid $button-default-active-bg-color;
  }
 
   &:focus {
@@ -292,8 +292,8 @@ a.btn-menu {
 
   &[disabled],
   &[disabled]:hover {
-    background-color: $btn-disabled-bg-color;
-    border: 1px solid $btn-disabled-border-color;
+    background-color: $button-default-disabled-bg-color;
+    border: 1px solid $button-default-disabled-border-color;
     box-shadow: none;
     cursor: default;
     opacity: $button-disabled-opacity;
